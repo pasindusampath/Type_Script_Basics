@@ -1,4 +1,8 @@
-class Student{
+//We have to use export keyword to access this class in another file
+//without using export we cannot access this class in another file
+//this concept calls modules
+//see demo.ts for understand how to import this class from there
+export class Student{
     //We can use access modifiers in Type Script so we can change the direct accessibility
     //private , public , protected
     //If we use older way of declaring constructor we need to add fields like this
@@ -20,12 +24,12 @@ class Student{
         this._address = address;
         this._contact = contact;
     }*/
-    constructor(private name?:string,private age?:number,private address?:string,private contact?:string) {
+    constructor(private _name?:string,private _age?:number,private _address?:string,private _contact?:string) {
     }
 
     //->    The getters and setters for inject data and access data
-    //->    We need these things if We use Older Way of declaring constructor
-    /*set name(value:string){
+    //->
+    set name(value:string){
         this._name = value;
     }
     get name():string{
@@ -48,12 +52,12 @@ class Student{
     }
     get contact():string{
         return this._contact;
-    }*/
+    }
 
 
 
-    //We Have To Create these methods to set and get data if we use modern way to declare constructor
-    getName(): string {
+    //We Have To Create these methods to set and get data if we use modern way to declare constructor without _
+    /*getName(): string {
         return this.name;
     }
 
@@ -83,7 +87,7 @@ class Student{
 
     setContact(value: string) {
         this.contact = value;
-    }
+    }*/
 
     public isEqual(student:Student) : boolean{
        return  student.name === this.name
@@ -102,9 +106,9 @@ function test(){
     let student2:Student = new Student('Pasindu',30,'Habarana','+94 78 714 9579')
 
     //Calling Setter and setting age
-    student.setAge(20);
+    student.age=20
 
-    console.log(student.getAge())
+    console.log(student.age)
     console.log(student2.isEqual(student))
 
 }
