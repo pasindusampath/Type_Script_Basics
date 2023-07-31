@@ -49,6 +49,11 @@ class Student{
     set contact(value: string) {
         this._contact = value;
     }
+
+    public isEqual(student:Student) : boolean{
+       return  student._name === this._name
+    }
+
 }
 
 
@@ -65,7 +70,7 @@ function test(){
     student.age=20;
 
     console.log(student.age)
-    console.log(student2.age)
+    console.log(student2.isEqual(student))
 
 }
 
