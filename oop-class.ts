@@ -21,7 +21,6 @@ class Student{
         this._contact = contact;
     }*/
     constructor(private name?:string,private age?:number,private address?:string,private contact?:string) {
-
     }
 
     //->    The getters and setters for inject data and access data
