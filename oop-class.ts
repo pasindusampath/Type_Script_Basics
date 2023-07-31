@@ -16,10 +16,7 @@ class Student{
         this._address = address;
         this._contact = contact;
     }
-
-
-
-    //The getters and setters for inject data and access data
+    //->    The getters and setters for inject data and access data
 
     get name(): string {
         return this._name;
@@ -53,3 +50,23 @@ class Student{
         this._contact = value;
     }
 }
+
+
+//Test Function for Object Assigning and reference
+function test(){
+    //This is a reference variable that can hold Student type object
+    let student:Student;
+
+    //this is how assign Student type object to Student type variable
+    student = new Student('Pasindu',30,'Habarana','+94 78 714 9579')
+    let student2:Student = new Student('Pasindu',30,'Habarana','+94 78 714 9579')
+
+    //Calling Setter and setting age
+    student.age=20;
+
+    console.log(student.age)
+    console.log(student2.age)
+
+}
+
+test();

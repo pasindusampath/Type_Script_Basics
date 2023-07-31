@@ -3,7 +3,7 @@
 let test_function = function doSomething(ob){
 	console.log(ob);
 }
-
+//calling function
 test_function('Hello');
 
 //->	Using Arrow Function
@@ -13,5 +13,5 @@ test_function('Hello');
 let ar_function = (ob)=>console.log(ob);
 
 
-
+//calling arrow function same as basic
 ar_function('Hello');
